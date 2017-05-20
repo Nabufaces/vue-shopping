@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <top_menu></top_menu>
+    <carousel></carousel>
     <img src="./assets/logo.png">
     <hello></hello>
     <button-example></button-example>
@@ -9,12 +11,16 @@
 <script>
 import Hello from './components/Hello';
 import ButtonExample from "./components/button";
+import top_menu from './components/top';
+import carousel from './components/carouse'
 
 export default {
   name: 'app',
   components: {
     ButtonExample,
-    Hello
+    Hello,
+    top_menu,
+    carousel
   }
 }
 </script>
