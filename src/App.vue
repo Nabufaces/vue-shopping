@@ -1,37 +1,32 @@
 <template>
   <div id="app">
     <top_menu></top_menu>
-    <carousel></carousel>
-    <img src="./assets/logo.png">
-    <hello></hello>
-    <button-example></button-example>
+    <el-row :gutter="10">
+      <el-col :span="3">
+          <sideBar></sideBar>
+      </el-col>
+      <el-col :span="21">
+          <main_body></main_body>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello';
-import ButtonExample from "./components/button";
 import top_menu from './components/top';
-import carousel from './components/carouse'
+import sideBar from './components/sideBar';
+import main_body from './components/main';
 
 export default {
   name: 'app',
   components: {
-    ButtonExample,
-    Hello,
     top_menu,
-    carousel
+    sideBar,
+    main_body
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
