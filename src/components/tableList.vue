@@ -97,7 +97,7 @@
 <script>
 export default {
   name: 'tableList',
-  mounted () {
+  created () {
       this.$emit('tableCount', this.$data.tableData.length);
   },
   data () {

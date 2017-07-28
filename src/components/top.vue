@@ -5,15 +5,13 @@
       <el-menu-item index="1">
         <div class="tt">货代报价系统</div>
       </el-menu-item>
-      <div class="user">hi gaowenlin@corp.netease.com 退出</div>
+      <div class="user">hi gaowenlin@corp.netease.com </div>
     </el-menu>
   </div>
 </template>
 
 <script>
-  import ElMenuItem from "../../node_modules/element-ui/packages/menu/src/menu-item";
   export default{
-    components: {ElMenuItem},
     name:'top_menu'
   }
 </script>
@@ -22,10 +20,13 @@
   .top_menu {
     height: 60px;
     line-height: 60px;
+    width: 100%;
+    overflow: hidden;
   }
 
   .top_menu img {
     float: left;
+    margin-top: 13px;
     margin-left: 20px;
   }
 
