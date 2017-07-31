@@ -48,7 +48,7 @@
       </el-col>
       <el-col :span="6" :offset="1">
           <el-button type="danger">查询</el-button>
-          <el-button>重置</el-button>
+          <el-button @click.once="showFlag = true">重置</el-button>
       </el-col>
     </el-row>
     <el-table
@@ -91,10 +91,15 @@
         width="120">
       </el-table-column>
     </el-table>
+    <modal :showFlag="showFlag" title="modal标题">
+        <div slot="body">123</div>
+    </modal>
   </div>
 </template>
 
 <script>
+import modal from './modal/modal';
+
 export default {
   name: 'tableList',
   created () {
@@ -102,6 +107,7 @@ export default {
   },
   data () {
     return {
+      showFlag: false,
       startPortStr: [{
           value: 1,
           label: '黄金糕'
@@ -165,6 +171,9 @@ export default {
             "volume":1.04500000
       }]
     }
+  },
+  components: {
+    modal
   }
 }
 </script>

@@ -22,7 +22,7 @@ export default {
 	props: {
 		showFlag: {
 			type: Boolean,
-			default: true
+			default: false
 		},
 		title: {
 			default: ''		//modal标题
